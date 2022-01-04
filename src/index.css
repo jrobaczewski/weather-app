@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.App {
+  background-image: url("./imgs/winter-g741b0d3bb_640.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4s ease-out;
+}
+.App.warm {
+  background-image: url("./imgs/warm-small.jpg");
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+}
+.search-box {
+  width: 100%;
+}
+.search-box .search-bar {
+  display: block;
+  position: relative;
+  width: 80%;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  appearance: none;
+  background: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  color: #333;
+  transition: 0.4s ease;
+}
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.location-box {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  /* left: 2em; */
+}
+.location-box .location {
+  color: #eee;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px rgba(38, 50, 50, 0.5);
+}
+.location-box .date {
+  color: #eee;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  margin-top: 5px;
+  text-shadow: 3px 3px rgba(38, 50, 50, 0.5);
+}
+.weather-box {
+  position: absolute;
+  top: 32%;
+}
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  padding: 15px 25px;
+  border-radius: 20px;
+  color: #eee;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 100px;
+  font-weight: 900;
+  text-shadow: 3px 6px rgba(50, 50, 50, 0.5);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+.weather-box .weather {
+  color: #eee;
+  text-align: center;
+  font-weight: 700;
+  font-size: 68px;
+  text-shadow: 3px 3px rgba(50, 50, 60, 0.6);
+}
+.feels {
+  text-align: center;
+  font-size: 30px;
+}
+.landing {
+  position: absolute;
+  top: 30%;
+}
+.landing div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  color: #eee;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  text-shadow: 3px 3px rgba(50, 50, 60, 0.6);
+}
+.landing div p {
+  margin-top: 20px;
+}
+.logo {
+  width: 150px;
+  margin: 2em 0;
+  color: #eee;
+}
+.loading {
+  position: absolute;
+}
+
+@media only screen and (min-width: 992px) {
+  .App {
+    background-image: url("./imgs/winter-big.jpg");
+  }
+  .App.warm {
+    background-image: url("./imgs/warm-big.jpg");
+  }
+}
